@@ -5,28 +5,38 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <style>
             body {
-                max-width: 600px;
-                margin: 0 auto;
+                background-color: gray;
+            }
+            .header {
+                background-color: brown;
+                color: white;
+                font-size: 1.5em;
+                padding: 20px;
             }
             button {
                 display: block;
-                width: 100%;
+                width: 95%;
                 height: 150px;
                 background-color: white;
-                margin-bottom: 15px;
+                margin: 15px;
                 border-radius: 5px;
                 border-width: 1px;
                 border-color: grey;
-                font-size: 1.5em;
+                font-size: 1.2em;
             }
-            button > img {
+            button > .img {
                 width: 140px;
+                height: 140px;
                 float: left;
+            }
+            .img > img {
+                width: 140px;
             }
         </style>
     </head>
     <body>
-        <button><img src="img1.jpg" alt="图片">震惊，阜阳某地，某个小学女生竟然不喜欢写作业，沉迷抖音无法自拔，这究竟是性格的扭曲，还是道德的沦丧？！</button>
+        <div class="header">肯艾新闻 - 超级新的新闻报道</div>
+        <button><div class="img"><img src="img1.jpg" alt="图片"></div><p>震惊，阜阳某地，某个小学女生竟然不喜欢写作业，沉迷抖音无法自拔，这究竟是性格的扭曲，还是道德的沦丧？！</p></button>
         <button>我是内容2</button>
         <button>我是内容3</button>
         <button>我是内容4</button>
