@@ -1,11 +1,301 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>域名报价页</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-    </head>
-    <body style="background-color: brown; text-align: center;">
-        <div style="display: inline-block; text-align: center; color: white; font-size: 2em; margin-top: 20%;">该域名正在寻求买家，报价12CNY<br>联系邮箱:vip@i63.top</div>
-    </body>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>你好，十五昂</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f8fafc;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #1e293b;
+            line-height: 1.5;
+            padding: 3rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 卡片样式 - 白色干净卡片 */
+        .card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            text-align: center;
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+        }
+        
+        .avatar {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 650;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #3b82f6;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .bio {
+            color: #475569;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* 区域标题 */
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #0f172a;
+        }
+        
+        .section-title span {
+            background: #eef2ff;
+            padding: 0.2rem 0.7rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #3b82f6;
+        }
+
+        /* 技能网格 - 柔和彩色标签 */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+        }
+        
+        .skill-tag {
+            background: #f1f5f9;
+            padding: 0.4rem 1.1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1e293b;
+            transition: all 0.2s ease;
+        }
+        
+        .skill-tag:hover {
+            background: #e6f0ff;
+            color: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        /* 项目列表 */
+        .project-item {
+            margin-bottom: 1.3rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #eef2ff;
+        }
+        
+        .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .project-title {
+            font-weight: 650;
+            margin-bottom: 0.3rem;
+        }
+        
+        .project-title a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .project-title a:hover {
+            text-decoration: underline;
+            color: #8b5cf6;
+        }
+        
+        .project-desc {
+            font-size: 0.9rem;
+            color: #5b6e8c;
+        }
+
+        /* 社交链接 - 柔和彩色 */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        
+        .social-link {
+            color: #475569;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.4rem 0;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .social-link:hover {
+            color: #3b82f6;
+            border-bottom-color: #3b82f6;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #eef2ff;
+            margin: 1rem 0;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 2rem;
+            padding-top: 0.5rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Hero 卡片 -->
+    <div class="card hero">
+        <div class="avatar">🌻</div>
+        <h1>十五昂</h1>
+        <div class="tagline">FIFTEENANG</div>
+        <div class="bio">
+            这是我的个人介绍页面。
+        </div>
+    </div>
+
+    <!-- 关于我 -->
+    <div class="card">
+        <div class="section-title">
+            关于我 <span>About</span>
+        </div>
+        <p style="margin-bottom: 0.8rem; color: #334155;">
+            你好，我来自 <strong>安徽</strong>。
+        </p>
+        <p style="color: #475569;">
+            目前是 大学生，计算机专业。
+            这个网页是用AI写的，因为我只会写一点点CSS。
+        </p>
+    </div>
+
+    <!-- 技能与工具 -->
+    <div class="card">
+        <div class="section-title">
+            玩游戏 <span>Games</span>
+        </div>
+        <div class="skills-grid">
+            <span class="skill-tag">打瓦</span>
+            <span class="skill-tag">打瓦</span>
+            <span class="skill-tag">打瓦</span>
+            <span class="skill-tag">MC</span>
+            <span class="skill-tag">MC</span>
+        </div>
+    </div>
+
+    <!-- 项目与作品 -->
+    <div class="card">
+        <div class="section-title">
+            我作品 <span>Projects</span>
+        </div>
+        <div class="project-item">
+            <div class="project-title">
+                暂无
+            </div>
+            <div class="project-desc">
+                -
+            </div>
+        </div>
+        <div class="project-item">
+            <div class="project-title">
+                暂无
+            </div>
+            <div class="project-desc">
+                -
+            </div>
+        </div>
+        <div class="project-item">
+            <div class="project-title">
+                暂无
+            </div>
+            <div class="project-desc">
+                -
+            </div>
+        </div>
+    </div>
+
+    <!-- 社交与联系 -->
+    <div class="card">
+        <div class="section-title">
+            找到我 <span>Social</span>
+        </div>
+        <div class="social-links">
+            <a href="https://www.douyin.com/user/MS4wLjABAAAAV2jIvisxbfhrZ5tz3TK-GqN-yX5LIwxBraOgcltmQnf1bF9sVbx2_YzHO3qL7EAS" class="social-link">抖音</a>
+            <a href="https://www.kuaishou.com/profile/3xrhunivgnkmea2" class="social-link">快手</a>
+            <a href="tencent://message/?uin=你的QQ号码&Site=在线咨询&Menu=yes" class="social-link">电脑QQ</a>
+            <a href="mqqwpa://im/chat?chat_type=wpa&uin=3677725991&version=1&src_type=web" class="social-link">手机QQ</a>
+        </div>
+        <hr>
+        <div style="text-align: center; font-size: 0.8rem; color: #6c7a91;">
+            欢迎找我玩~ ✨
+        </div>
+    </div>
+
+    <footer>
+        🧑‍💻 十五昂 · FIFTEENANG
+    </footer>
+</div>
+
+<script>
+    console.log("？？？让你看日志了吗就看");
+</script>
+</body>
 </html>
